@@ -1,0 +1,35 @@
+
+.form-wrapper
+{
+display: grid;
+grid-template-columns: repeat(4 , 1fr ); 
+grid-template-rows: repeat(3,1fr); 
+}
+
+form{
+grid-row: 2/4; 
+grid-column: 2;
+border: 2px rgb(131, 123, 123) solid; 
+border-radius: 20px; 
+padding: 1.1em;  
+background: white; 
+font-family: "Josefin Sans"; 
+background: white; 
+}
+
+
+body{ 
+height: 90vh; 
+background: no-repeat top center fixed ;
+background-size: auto ; 
+background-image: url("../../assets/battlerite.png") 
+}
+form input
+{
+    height: 1.3pc;
+}
+.submit-button
+{
+ margin: auto;
+ border-radius: 20px;   
+}

@@ -1,0 +1,79 @@
+
+
+<div class="jumbotron jumbotron-fluid">
+
+    <div class="container">
+      <h1  class="display-4">Hello There!</h1>
+      <p class="lead">This is a small website i made using angular6 and express</p>
+      <mat-divider></mat-divider>
+      <br>
+      <br>
+      
+<h3>Used modules / libraries / database</h3>
+  
+        <br>
+        <mat-divider></mat-divider>
+
+
+        <mat-expansion-panel class="MainPanel">
+          <br>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Modules
+              </mat-panel-title>
+              <mat-panel-description>
+              Press To Show Modules Used.
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+          <mat-expansion-panel *ngFor="let key of ModuleKeys">
+              <mat-expansion-panel-header >
+                  <mat-panel-title>{{key}}</mat-panel-title>
+                  <mat-panel-description>Slide down to see the module names</mat-panel-description>
+              </mat-expansion-panel-header>
+              <ul class="list-group">
+                  <li style="background: rgb(149, 184, 240);" *ngFor="let mods of Modules[key]" class="list-group-item"><b>{{mods}}</b> Module</li>
+                  </ul>
+          </mat-expansion-panel>
+          </mat-expansion-panel>
+
+          <br>
+          <mat-divider></mat-divider>
+
+          <mat-expansion-panel >
+              <mat-expansion-panel-header>
+                  <mat-panel-title>Frameworks</mat-panel-title>
+                  <mat-panel-description>Slide down to see the frameworks used</mat-panel-description>                  
+              </mat-expansion-panel-header>
+              <ul class="list-group">
+                  <li style="background: rgb(149, 184, 240);" *ngFor="let mods of Frameworks.Express" class="list-group-item">{{mods}}</li>
+                  </ul>
+          </mat-expansion-panel>
+
+
+          <h3>Work</h3>
+          <p>These images are some work i made using javascript and Firebase.</p>
+
+
+          <div class="grid-images">
+          <mat-grid-list cols="6" rowHeight="100px">
+              <mat-grid-tile
+                  *ngFor="let tile of tiles"
+                  [colspan]="tile.cols"
+                  [rowspan]="tile.rows"
+                  class="zoom"
+                 >
+                <a target="_blank" href="{{tile.link}}"><img src="{{tile.image}}" alt="msh la2yeen "></a>
+              </mat-grid-tile>
+            </mat-grid-list>
+          </div>
+
+
+          <div class="footer">
+          <br>
+          <p>Of course i did not mention all the modules/libraries i used, but anyways press this Button to get you started into the signing in page</p>
+          <button routerLink="/form"  class="btn btn-lg btn-primary ">Lets go</button>
+          <p>You can find the login information to be used in the github link provided just in case</p>
+        </div>
+        <input type="file" (change)="uploadFile($event)">
+    </div>
+  </div>

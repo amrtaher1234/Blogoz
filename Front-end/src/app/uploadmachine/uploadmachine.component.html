@@ -1,0 +1,20 @@
+
+<div class="jumbotron">
+  <div style="text-align: center" class="container">
+<h2>
+  Images Uploader
+</h2>
+<p>here you can upload images to your storage, after finishing you can check their URLS</p>
+<input type="file" (change)="uploadFile($event)">
+<div *ngIf="downloadURL" ><a target="_blank" href="{{downloadURL}}">Link to the image</a> to assure the uploading process!</div>
+
+
+<div style="margin: auto" *ngIf="loading" class="spinner">
+    <div class="rect1"></div>
+    <div class="rect2"></div>
+    <div class="rect3"></div>
+    <div class="rect4"></div>
+    <div class="rect5"></div>
+  </div>
+</div>
+</div>

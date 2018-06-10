@@ -1,0 +1,9 @@
+
+        <div class="jumbotron">
+          <h3>List of images stored in the db in a slide show</h3>
+        </div>
+        <div id="slider">
+            <figure>
+            <img *ngFor="let link of links" src="{{link.Link}}" alt>
+            </figure>
+            </div>
